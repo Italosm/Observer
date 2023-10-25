@@ -37,6 +37,7 @@ class PublisherNewEdition implements Subject {
         notifyObservers();
     }
 
+
     @Override
     public void notifyObservers() {
         for (ObserverInterface observer : observers) {
@@ -71,10 +72,10 @@ class ObserverPatternExample {
         subject.addObserver(observer1);
         subject.addObserver(observer2);
 
-        subject.setMessage("Nova mensagem para observadores.");
+        subject.setMessage("Uma nova edição está disponível para você.");
         subject.removeObserver(observer2);
 
-        subject.setMessage("Outra mensagem para observadores.");
+        subject.setMessage("Adquira agora a mais nova edição com 50% de desconto.");
     }
 }
 
